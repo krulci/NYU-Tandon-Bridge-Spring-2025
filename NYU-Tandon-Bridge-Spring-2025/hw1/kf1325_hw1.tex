@@ -1,0 +1,1124 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{array,mathtools}
+\newcommand*{\carry}[1][1]{\overset{#1}}
+\newcolumntype{B}[1]{r*{#1}{@{\,}r}}
+
+\begin{document}
+\section*{Homework 1}
+Student: Kevin Fang (kf1325)
+
+\section*{Question 1}
+\section*{A.}
+\subsection*{1.}
+
+$$
+\begin{aligned}
+10011011_{2} & =1 \times 2^{7}+0 \times 2^{6}+0 \times 2^{5}+1 \times 2^{4}+1 \times 2^{3}+0 \times 2^{2}+1 \times 2^{1}+1 \times 2^{0} \\
+& =128+0+0+16+8+0+2+1 \\
+& =155
+\end{aligned}
+$$
+
+\subsection*{2.}
+
+$$
+\begin{aligned}
+456_{7} & =4 \times 7^{2}+5 \times 7^{1}+6 \times 7^{0} \\
+& =196+35+6 \\
+& =237
+\end{aligned}
+$$
+
+\subsection*{3.}
+
+$$
+\begin{aligned}
+38 A_{16} & =3 \times 16^{2}+8 \times 16^{1}+10 \times 16^{0} \\
+& =768+128+10 \\
+& =906
+\end{aligned}
+$$
+
+\subsection*{4.}
+
+$$
+\begin{aligned}
+2214_{5} & =2 \times 5^{3}+2 \times 5^{2}+1 \times 5^{1}+4 \times 5^{0} \\
+& =250+50+5+4 \\
+& =309
+\end{aligned}
+$$
+
+\pagebreak
+\section*{B.}
+\subsection*{1.}
+
+$$
+\begin{aligned}
+69 \div 2 &= 34 &\quad \bmod 1 \\
+34 \div 2 &= 17 &\quad \bmod 0 \\
+17 \div 2 &= 8  &\quad \bmod 1 \\
+8 \div 2  &= 4  &\quad \bmod 0 \\
+4 \div 2  &= 2  &\quad \bmod 0 \\
+2 \div 2  &= 1  &\quad \bmod 0 \\
+1 \div 2  &= 0  &\quad \bmod 1 \\
+69_{10}   &= 1000101_{2}
+\end{aligned}
+$$
+
+\subsection*{2.}
+
+$$
+\begin{array}{rlr}
+485 \div 2 & =242 &\quad \bmod 1 \\
+242 \div 2 & =121 &\quad \bmod 0 \\
+121 \div 2 & =60 &\quad \bmod 1 \\
+60 \div 2 & =30 &\quad \bmod 0 \\
+30 \div 2 & =15 &\quad \bmod 0 \\
+15 \div 2 & =7 &\quad \bmod 1 \\
+7 \div 2 & =3 &\quad \bmod 1 \\
+3 \div 2 & =1 &\quad \bmod 1 \\
+1 \div 2 & =0 &\quad \bmod 1 \\
+& \\
+485_{10} & =111100101_{2}
+\end{array}
+$$
+
+\subsection*{3.}
+
+\begin{flushleft}
+We translate each hexadecimal digit into a 4-bit binary equivalent.
+
+$$
+\begin{aligned}
+6_{16} &= 0110_{2} \\
+D_{16} &= 13_{10} &= 1101_{2} \\
+1_{16} &= 0001_{2} \\
+A_{16} &= 10_{10} &= 1010_{2}
+\end{aligned}
+$$
+
+Thus, combining the binary values, We get,
+
+$$
+6 D 1 A_{16}=0110110100011010_{2}
+$$
+\end{flushleft}
+
+\section*{C.}
+\subsection*{1.}
+
+$$
+1101011_{2}=01101011_{2}
+$$
+
+We translate each hexadecimal digit into a 4-bit binary equivalent.
+
+$$
+\begin{aligned}
+& 0110_{2}=6_{16} \\
+& 1011_{2}=B_{16}
+\end{aligned}
+$$
+
+Thus, combining the binary values, We get,
+
+$$
+1101011_{2}=6 B_{16}
+$$
+
+\subsection*{2.}
+
+$$
+\begin{aligned}
+895 \div 16 & =55 & & \bmod 15 \\
+55 \div 16 & =3 & & \bmod 7 \\
+3 \div 16 & =0 & & \bmod 3 \\
+15_{10} & =F_{16} & & \\
+895_{10} & =37 F_{16} & &
+\end{aligned}
+$$
+
+\pagebreak
+\section*{Question 2}
+\subsection*{1.}
+
+
+$$
+\begin{array}{@{}B2}
+\carry 0\carry 7\carry 5\carry 6 6_{8} \\
++4515_{8} \\\hline 
+14303_{8} \\
+\end{array}
+$$
+
+$$
+7566_{8}+4515_{8}=14303_{8}
+$$
+
+\subsection*{2.}
+
+$$
+\begin{array}{@{}B2}
+10\carry 1\carry 1\carry 0\carry 0\carry 11_{2} \\
++00001101_{2} \\\hline 
+11000000_{2} \\
+\end{array}
+$$
+
+$$
+10110011_{2}+1101_{2}=11000000_{2}
+$$
+
+\subsection*{3.}
+
+$$
+\begin{array}{@{}B2}
+\carry 7& \carry A&66_{16} \\
++4&5&C5_{16} \\\hline 
+C&0&2B_{16} \\
+\end{array}
+$$
+
+$$
+7 A 66_{16}+45 C 5_{16}=C 02 B_{16}
+$$
+
+\subsection*{4.}
+
+$$
+\begin{array}{@{}B2}
+\carry [2] 3 \carry [4] 0 \carry 22_{5} \\
+-2433_{5} \\\hline 
+34_{5}
+\end{array}
+$$
+
+$$
+3022_{5}-2433_{5}=34_{5}
+$$
+
+\pagebreak
+\section*{Question 3}
+\section*{A.}
+\subsection*{1.}
+
+$$
+\begin{array}{rlr}
+124 \div 2 & =62 & \bmod 0 \\
+62 \div 2 & =31 & \bmod 0 \\
+31 \div 2 & =15 & \bmod 1 \\
+15 \div 2 & =7 & \bmod 1 \\
+7 \div 2 & =3 & \bmod 1 \\
+3 \div 2 & =1 & \bmod 1 \\
+1 \div 2 & =0 & \bmod 1
+\end{array}
+$$
+
+$$
+124_{10}=01111100 \textsubscript{ 8 bit 2's comp}
+$$
+
+\subsection*{2.}
+
+$$
+\begin{aligned}
+124 \div 2 & =62 & \bmod 0 \\
+62 \div 2 & =31 & \bmod 0 \\
+31 \div 2 & =15 & \bmod 1 \\
+15 \div 2 & =7 & \bmod 1 \\
+7 \div 2 & =3 & \bmod 1 \\
+3 \div 2 & =1 & \bmod 1 \\
+1 \div 2 & =0 & \bmod 1 \\
+\end{aligned}
+$$
+
+Hence, the absolute binary representation of 124 is as followed:
+
+$$
+\begin{aligned}
+124_{10} & =01111100_{2}
+\end{aligned}
+$$
+
+The inverted bits are as followed:
+
+$$
+10000011
+$$
+
+Add 1,
+
+$$
+10000011+00000001=10000100
+$$
+
+Thus,
+
+$$
+-124_{10}=10000100 \textsubscript{ 8 bit 2's comp}
+$$
+
+\subsection*{3.}
+
+$$
+\begin{aligned}
+109 \div 2 &= 54 & \bmod 1 \\
+54 \div 2 &= 27 & \bmod 0 \\
+27 \div 2 &= 13 & \bmod 1 \\
+13 \div 2 &= 6 & \bmod 1 \\
+6 \div 2 &= 3 & \bmod 0 \\
+3 \div 2 &= 1 & \bmod 1 \\
+1 \div 2 &= 0 & \bmod 1 \\
+\end{aligned}
+$$
+
+$$
+109_{10}=01101101 \textsubscript{ 8 bit 2's comp}
+$$
+
+\subsection*{4.}
+
+$$
+\begin{aligned}
+79 \div 2 & =39 & \bmod 1 \\
+39 \div 2 & =19 & \bmod 1 \\
+19 \div 2 & =9 & \bmod 1 \\
+9 \div 2 & =4 & \bmod 1 \\
+4 \div 2 & =2 & \bmod 0 \\
+2 \div 2 & =1 & \bmod 0 \\
+1 \div 2 & =0 & \bmod 1 \\
+\end{aligned}
+$$
+
+Hence, the absolute binary representation of 79 is as followed:
+
+$$
+\begin{aligned}
+79_{10} & =01001111_{2}
+\end{aligned}
+$$
+
+The inverted bits are as followed:
+
+$$
+10110000
+$$
+
+Add 1,
+
+$$
+10110000+00000001=10110001
+$$
+
+Then,
+
+$$
+-79_{10}=10110001 \textsubscript{ 8 bit 2's comp}
+$$
+
+\section*{B.}
+\subsection*{1.}
+
+$$
+\begin{aligned}
+00011110 \textsubscript{ 8 bit 2's comp} & =
+-0 \times 2^{7}
++0 \times 2^{6}
++0 \times 2^{5}
++1 \times 2^{4}
++1 \times 2^{3}
++1 \times 2^{2}
++1 \times 2^{1}
++0 \times 2^{0} \\
+& =-0+0+0+16+8+4+2+0 \\
+& =30
+\end{aligned}
+$$
+
+\subsection*{2.}
+
+
+$$
+\begin{aligned}
+11100110 \textsubscript{ 8 bit 2's comp} & =
+-1 \times 2^{7}
++1 \times 2^{6}
++1 \times 2^{5}
++0 \times 2^{4}
++0 \times 2^{3}
++1 \times 2^{2}
++1 \times 2^{1}
++0 \times 2^{0} \\
+& =-128+64+32+0+0+4+2+0 \\
+& =-26
+\end{aligned}
+$$
+
+\subsection*{3.}
+
+$$
+\begin{aligned}
+00101101 \textsubscript{ 8 bit 2's comp} & =
+-0 \times 2^{7}
++0 \times 2^{6}
++1 \times 2^{5}
++0 \times 2^{4}
++1 \times 2^{3}
++1 \times 2^{2}
++0 \times 2^{1}
++1 \times 2^{0} \\
+& =-0+0+32+0+8+4+0+1 \\
+& =45
+\end{aligned}
+$$
+
+\subsection*{4.}
+
+$$
+\begin{aligned}
+10011110 \textsubscript{ 8 bit 2's comp} & =
+-1 \times 2^{7}
++0 \times 2^{6}
++0 \times 2^{5}
++1 \times 2^{4}
++1 \times 2^{3}
++1 \times 2^{2}
++1 \times 2^{1}
++0 \times 2^{0} \\
+& =-128+0+0+16+8+4+2+0 \\
+& =-98
+\end{aligned}
+$$
+
+\pagebreak
+\section*{Question 4}
+\section*{1. Exercise 1.2.4}
+\section*{section b}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$p$ & $q$ & $p \vee q$ & $\neg(p \vee q)$ \\
+\hline
+T & T & T & F \\
+\hline
+T & F & T & F \\
+\hline
+F & T & T & F \\
+\hline
+F & F & F & T \\
+\hline
+\end{tabular}
+\end{center}
+
+\section*{section c}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $r$ & $p \wedge \neg q$ & $r \vee(p \wedge \neg q)$ \\
+\hline
+T & T & T & F & T \\
+\hline
+T & T & F & F & F \\
+\hline
+T & F & T & T & T \\
+\hline
+T & F & F & T & T \\
+\hline
+F & T & T & F & T \\
+\hline
+F & T & F & F & F \\
+\hline
+F & F & T & F & T \\
+\hline
+F & F & F & F & F \\
+\hline
+\end{tabular}
+\end{center}
+
+\section*{2. Exercise 1.3.4}
+\section*{section b}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $p \rightarrow q$ & $q \rightarrow p$ & $(p \rightarrow q) \rightarrow(q \rightarrow p)$ \\
+\hline
+T & T & T & T & T \\
+\hline
+T & F & F & T & T \\
+\hline
+F & T & T & F & F \\
+\hline
+F & F & T & T & T \\
+\hline
+\end{tabular}
+\end{center}
+
+\section*{section d}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $p \leftrightarrow q$ & $p \leftrightarrow \neg q$ & $(p \leftrightarrow q) \oplus(p \leftrightarrow \neg q)$ \\
+\hline
+T & T & T & F & T \\
+\hline
+T & F & F & T & T \\
+\hline
+F & T & F & T & T \\
+\hline
+F & F & T & F & T \\
+\hline
+\end{tabular}
+\end{center}
+
+\pagebreak
+\section*{Question 5}
+\section*{1. Exercise 1.2.7}
+\section*{section b}
+
+$$
+(B \wedge D) \vee(B \wedge M) \vee(D \wedge M)
+$$
+
+\section*{section c}
+
+$$
+B \vee(D \wedge M)
+$$
+
+\section*{2. Exercise 1.3.7}
+\section*{section b}
+
+$$
+(s \vee y) \rightarrow p
+$$
+
+\section*{section c}
+
+$$
+p \rightarrow y
+$$
+
+\section*{section d}
+
+$$
+p \leftrightarrow(s \wedge y)
+$$
+
+\section*{section e}
+
+$$
+p \rightarrow(s \vee y)
+$$
+
+\section*{3. Exercise 1.3.9}
+\section*{section c}
+
+$$
+c \rightarrow p
+$$
+
+\section*{section d}
+
+$$
+c \rightarrow p
+$$
+
+\pagebreak
+\section*{Question 6}
+\section*{1. Exercise 1.3.6}
+\section*{section b}
+If Joe is eligible for the honors program, then he maintains a B average.
+
+\section*{section c}
+If Rajiv can go on the roller coaster, then he is at least four feet tall.
+
+\section*{section d}
+If Rajiv is at least four feet tall, then he can go on the roller coaster.
+
+\section*{2. Exercise 1.3.10}
+\section*{section c}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $r$ & $p \vee r$ & $q \wedge r$ & $(p \vee r) \leftrightarrow(q \wedge r)$ \\
+\hline
+T & F & T & T & F & F \\
+\hline
+T & F & F & T & F & F \\
+\hline
+\end{tabular}
+\end{center}
+
+The truth table indicates that the truth value of the expression $(p \vee r) \leftrightarrow(q \wedge r)$ is false.
+
+\section*{section d}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $r$ & $p \wedge r$ & $q \wedge r$ & $(p \wedge r) \leftrightarrow(q \wedge r)$ \\
+\hline
+T & F & T & T & F & F \\
+\hline
+T & F & F & F & F & T \\
+\hline
+\end{tabular}
+\end{center}
+
+The truth table indicates that the truth value of the expression $(p \wedge r) \leftrightarrow(q \wedge r)$ is unknown.
+
+\section*{section e}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $r$ & $r \vee q$ & $p \rightarrow(r \vee q)$ \\
+\hline
+T & F & T & T & T \\
+\hline
+T & F & F & F & F \\
+\hline
+\end{tabular}
+\end{center}
+
+The truth table indicates that the truth value of the expression $p \rightarrow(r \vee q)$ is unknown.
+
+\section*{section $\mathbf{f}$}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$p$ & $q$ & $r$ & $p \wedge q$ & $(p \wedge q) \rightarrow r$ \\
+\hline
+T & F & T & F & T \\
+\hline
+T & F & F & F & T \\
+\hline
+\end{tabular}
+\end{center}
+
+The truth table indicates that the truth value of the expression $(p \wedge q) \rightarrow r$ is true.
+
+\pagebreak
+\section*{Question 7}
+\section*{Exercise 1.4.5}
+\section*{section b}
+
+The logical expression of the first sentence is as follows:
+
+$$
+\neg j \rightarrow(l \vee \neg r)
+$$
+
+The logical expression of the second sentence is as follows:
+
+$$
+(r \wedge \neg l) \rightarrow j
+$$
+
+Proof:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$j$ & $l$ & $r$ & $\neg j \rightarrow(l \vee \neg r)$ & $(r \wedge \neg l) \rightarrow j$ \\
+\hline
+T & T & T & T & T \\
+\hline
+T & T & F & T & T \\
+\hline
+T & F & T & T & T \\
+\hline
+T & F & F & T & T \\
+\hline
+F & T & T & T & T \\
+\hline
+F & T & F & T & T \\
+\hline
+F & F & T & F & F \\
+\hline
+F & F & F & T & T \\
+\hline
+\end{tabular}
+\end{center}
+
+The truth table indicates that the two expressions have the same truth value in all situations; therefore, they are logically equivalent.
+
+\section*{section c}
+The logical expression of the first sentence is as follows:
+
+$$
+j \rightarrow \neg l
+$$
+
+The logical expression of the second sentence is as follows:
+
+$$
+\neg j \rightarrow l
+$$
+
+Proof:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+$j$ & $l$ & $j \rightarrow \neg l$ & $\neg j \rightarrow l$ \\
+\hline
+T & T & F & T \\
+\hline
+T & F & T & T \\
+\hline
+F & T & T & T \\
+\hline
+F & F & T & F \\
+\hline
+\end{tabular}
+\end{center}
+
+The truth table indicates that the two expressions have different truth values; therefore, they are not logically equivalent.
+
+\section*{section d}
+The logical expression of the first sentence is as follows:
+
+$$
+(r \vee \neg l) \rightarrow j
+$$
+
+The logical expression of the second sentence is as follows:
+
+$$
+j \rightarrow(r \wedge \neg l)
+$$
+
+Proof:
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$j$ & $l$ & $r$ & $(r \vee \neg l) \rightarrow j$ & $j \rightarrow(r \wedge \neg l)$ \\
+\hline
+T & T & T & T & F \\
+\hline
+T & T & F & T & F \\
+\hline
+T & F & T & T & T \\
+\hline
+T & F & F & T & F \\
+\hline
+F & T & T & F & T \\
+\hline
+F & T & F & T & T \\
+\hline
+F & F & T & F & T \\
+\hline
+F & F & F & F & T \\
+\hline
+\end{tabular}
+\end{center}
+
+The truth table indicates that the two expressions have different truth values; therefore, they are not logically equivalent.
+
+\pagebreak
+\section*{Question 8}
+\section*{1. Exercise 1.5.2}
+\section*{section c}
+
+$$
+\begin{aligned}
+(p \rightarrow q) \wedge(p \rightarrow r) & \equiv(\neg p \vee q) \wedge(p \rightarrow r) & \text { (Conditional identity) } \\
+& \equiv(\neg p \vee q) \wedge(\neg p \vee r) & \text { (Conditional identity) } \\
+& \equiv \neg p \wedge(q \vee r) & \text { (Distributive law) } \\
+& \equiv p \rightarrow(q \vee r) & \text { (Conditional identity) }
+\end{aligned}
+$$
+
+\section*{section f}
+
+$$
+\begin{aligned}
+\neg(p \vee(\neg p \wedge q)) & \equiv \neg((p \vee \neg p) \wedge(p \vee q)) & \text {(Distributive law)}\\
+& \equiv \neg(T \wedge(p \vee q)) & \text {(Complement law)}\\
+& \equiv \neg(p \vee q)  & \text {(Identity law)}\\
+& \equiv \neg p \wedge \neg q & \text {(De Morgan's law)} \\
+\end{aligned}
+$$
+
+\section*{section i}
+
+$$
+\begin{aligned}
+(p \wedge q) \rightarrow r & \equiv \neg(p \wedge q) \vee r & \text {(Conditional identity)}\\
+& \equiv(\neg p \vee \neg q) \vee r                         & \text {(De Morgan's law)}\\
+& \equiv r \vee(\neg p \vee \neg q)                         & \text {(Commutative law)}\\
+& \equiv(r \vee \neg p) \vee \neg q                         & \text {(Associative law)}\\
+& \equiv(\neg p \vee r) \vee \neg q                         & \text {(Commutative law)}\\
+& \equiv(\neg p \vee \neg \neg r) \vee \neg q               & \text {(Double negation law)}\\
+& \equiv \neg(p \wedge \neg r) \vee \neg q                  & \text {(De Morgan's law)}\\
+& \equiv(p \wedge \neg r) \rightarrow \neg q                & \text {(Conditional identity)}\\
+\end{aligned}
+$$
+
+\section*{2. Exercise 1.5.3}
+\section*{section c}
+
+$$
+\begin{aligned}
+\neg r \vee(\neg r \rightarrow p) & \equiv \neg r \vee(\neg \neg r \vee p) & \text {(Conditional identity)}\\
+& \equiv \neg r \vee(r \vee p)                                             & \text {(Double negation law)}\\
+& \equiv(\neg r \vee r) \vee p                                             & \text {(Associative law)}\\
+& \equiv T \vee p                                                          & \text {(Complement law)}\\
+& \equiv T                                                                   & \text {(Domination law)}\\
+\end{aligned}
+$$
+
+\section*{section d}
+$$
+\begin{aligned}
+\neg(p \rightarrow q) \rightarrow \neg q & \equiv \neg \neg(p \rightarrow q) \vee \neg q & \text {(Conditional identity)}\\
+& \equiv(p \rightarrow q) \vee \neg q                                                    & \text {(Double negation law)}\\
+& \equiv(\neg p \vee q) \vee \neg q                                                      & \text {(Conditional identity)}\\
+& \equiv \neg p \vee(q \vee \neg q)                                                      & \text {(Associative law)}\\
+& \equiv \neg p \vee T                                                                   & \text {(Complement law)}\\
+& \equiv T                                                                               & \text {(Domination law)}\\
+\end{aligned}
+$$
+
+\pagebreak
+\section*{Question 9}
+\section*{1. Exercise 1.6.3}
+\section*{section c}
+
+$$
+\exists x\left(x=x^{2}\right)
+$$
+
+\section*{section d}
+
+$$
+\forall x\left(x \leq x^{2}+1\right)
+$$
+
+\section*{2. Exercise 1.7.4}
+\section*{section b}
+$$
+\forall x(\neg S(x) \wedge W(x))
+$$
+
+\section*{section c}
+
+$$
+\forall x(S(x) \rightarrow \neg W(x))
+$$
+
+\section*{section d}
+
+$$
+\exists x(S(x) \wedge W(x))
+$$
+
+\pagebreak
+\section*{Question 10}
+\section*{1. Exercise 1.7.9}
+\section*{section c}
+True.\\
+The expression indicates that there exists an $x$ such that either $x=c$ is false or $P(x)$ is true. The truth table indicates that if $x=a, x=c$ is false; thus, the expression is true.
+
+\section*{section d}
+True.\\
+The truth table indicates that if $x=e$, then both $Q(x)$ and $R(x)$ are true so that $Q(x) \wedge R(x)$ is true. Therefore, there exists an $x$ such that $Q(x) \wedge R(x)$ is true.
+
+\section*{section e}
+True.\\
+The truth table indicates that both $Q(a)$ and $P(d)$ is true. Therefore, $Q(a) \wedge P(d)$ is true.
+
+\section*{section f}
+True.\\
+The truth table indicates that for all $x$, where $x \neq b, Q(x)$ is always true.
+
+\section*{section g}
+False.\\
+The truth table indicates when $x=c$, both $P(x)$ and $R(x)$ are false, so that $P(x) \vee R(x)$ is false. Therefore, for all $x, P(x) \vee R(x)$ is false.
+
+\section*{section h}
+True.\\
+According to the truth table, for all $x$, either $P(x)$ is true or $R(x)$ is false. If $P(x)$ is true, then $R(x) \rightarrow P(x)$ is true. If $R(x)$ is false, then $R(x) \rightarrow P(x)$ is also true. Therefore, for all $x, R(x) \rightarrow P(x)$ is always true.
+
+\section*{section i}
+True.\\
+The truth table indicates that when $x=a$, $Q(x)$ is true and $R(x)$ is false so that $Q(x) \vee R(x)$ is true. Therefore, there exists an $x$ such that $Q(x) \vee R(x)$ is true.
+
+\section*{2. Exercise 1.9.2}
+\section*{section b}
+True.\\
+The truth table indicates that when $x=2, Q(x, y)$ is true for all $y$.\\
+\section*{section c}
+True.\\
+The truth table indicates that when $y=1$, $P(x, y)$ is true for all $x$.\\
+\section*{section d}
+False.\\
+The truth table indicates that $S(x, y)$ is always false. Therefore, there are no $x$ and a $y$ such that $S(x, y)$ is true.
+
+\section*{section e}
+False.\\
+The truth table indicates that when $x=1$, there does not exist a $y$ such that $Q(x, y)$ is true. Therefore, the statement "for all $x$, there exists a $y$ such that $Q(x, y)$ is true" is false.
+
+\section*{section f}
+True.\\
+The truth table indicates that for all $x$, there exists a $y$ such that $P(x, y)$ is true. When $x=1$, if $y=1$, then $P(x, y)$ is true. When $x=2$, if $y=1$, then $P(x, y)$ is true. When $x=3$, if $y=1$, then $P(x, y)$ is true.
+
+\section*{section g}
+False.\\
+The truth table indicates that when $x=1$ and $y=2$, $P(x, y)$ is false. Therefore, the statement that "for all $x$ and $y, P(x, y)$ is true" is false.
+
+\section*{section h}
+True.\\
+The truth table indicates that when $x=2$ and $y=1, Q(x, y)$ is true. Therefore, there exist an $x$ and a $y$ such that $Q(x, y)$ is true.
+
+\section*{section i}
+True.\\
+The truth table indicates that for all $x$ and $y, S(x, y)$ is always false. Therefore, $\neg Q(x, y)$ is always true.
+
+\pagebreak
+\section*{Question 11}
+\section*{1. Exercise 1.10.4}
+\section*{section c}
+$$
+\exists x \exists y(x+y=x y)
+$$
+
+\section*{section d}
+
+$$
+\forall x \forall y\left(((x>0) \wedge(y>0)) \rightarrow\left(\frac{x}{y}>0\right)\right)
+$$
+
+\section*{section e}
+
+$$
+\forall x\left(((x>0) \wedge(x<1)) \rightarrow\left(\frac{1}{x}>1\right)\right)
+$$
+
+\section*{section f}
+
+$$
+\forall x \exists y(y<x)
+$$
+
+\section*{section g}
+
+$$
+\forall x \exists y\left((x \neq 0) \rightarrow\left(y=\frac{1}{x}\right)\right)
+$$
+
+\section*{2. Exercise 1.10.7}
+\section*{section c}
+$$
+\exists x(N(x) \wedge D(x))
+$$
+
+\section*{section d}
+
+$$
+\forall y(D(y) \rightarrow P(\mathrm{Sam}, y))
+$$
+
+\section*{section e}
+
+$$
+\exists x \forall y(N(x) \wedge P(x, y))
+$$
+
+\section*{section f}
+
+$$
+\exists x \forall y((N(x) \wedge D(x)) \wedge((N(y) \wedge(y \neq x)) \rightarrow \neg D(y)))
+$$
+
+\section*{3. Exercise 1.10.10}
+\section*{section c}
+
+$$
+\forall x \exists y(T(x, y) \wedge(y \neq \text { Math 101 }))
+$$
+
+\section*{section d}
+
+$$
+\exists x \forall y((y \neq \text { Math 101 }) \rightarrow T(x, y))
+$$
+
+\section*{section e}
+
+$$
+\forall x \exists y_{1} \exists y_{2}\left((x \neq \operatorname{Sam}) \rightarrow\left(T\left(x, y_{1}\right) \wedge T\left(x, y_{2}\right) \wedge\left(y_{1} \neq y_{2}\right)\right)\right)
+$$
+
+\section*{section f}
+$\left.\exists y_{1} \exists y_{2} \forall y_{3}\left(T\left(\operatorname{Sam}, y_{1}\right) \wedge T\left(\operatorname{Sam}, y_{2}\right) \wedge\left(y_{1} \neq y_{2}\right) \wedge\left(y_{3} \neq y_{1}\right) \wedge\left(y_{3} \neq y_{2}\right)\right) \rightarrow \neg T\left(\operatorname{Sam}, y_{3}\right)\right)$
+
+\pagebreak
+\section*{Question 12}
+\section*{1. Exercise 1.8.2}
+\section*{section b}
+Logical Expression:
+
+$$
+\forall x(D(x) \vee P(x))
+$$
+
+Negation:
+
+$$
+\neg \forall x(D(x) \vee P(x))
+$$
+
+Applying De Morgan's law:
+
+$$
+\exists x \neg(D(x) \vee P(x))
+$$
+
+Applying De Morgan's law:
+
+$$
+\exists x(\neg D(x) \wedge \neg P(x))
+$$
+
+English: There is a patient who received neither the medication nor the placebo.
+
+\section*{section c}
+Logical Expression:
+
+$$
+\exists x(D(x) \wedge M(x))
+$$
+
+Negation:
+
+$$
+\neg \exists x(D(x) \wedge M(x))
+$$
+
+Applying De Morgan's law:
+
+$$
+\forall x \neg(D(x) \wedge M(x))
+$$
+
+Applying De Morgan's law:
+
+$$
+\forall x(\neg D(x) \vee \neg M(x))
+$$
+
+English: Not every patients were given the medication nor did they have migraines or both.
+
+\section*{section d}
+Logical Expression:
+
+$$
+\forall x(P(x) \rightarrow M(x))
+$$
+
+Negation:
+
+$$
+\neg \forall x(P(x) \rightarrow M(x))
+$$
+
+Applying De Morgan's law:
+
+$$
+\exists x \neg(P(x) \rightarrow M(x))
+$$
+
+Applying conditional identity:
+
+$$
+\exists x \neg(\neg P(x) \vee M(x))
+$$
+
+Applying De Morgan's law:
+
+$$
+\exists x(\neg \neg P(x) \wedge \neg M(x))
+$$
+
+Applying double negation law:
+
+$$
+\exists x(P(x) \wedge \neg M(x))
+$$
+
+English: There was a patient who was given a placebo and did not have migraines.
+
+
+\section*{section e}
+Logical Expression:
+
+$$
+\exists x(M(x) \wedge P(x))
+$$
+
+Negation:
+
+$$
+\neg \exists x(M(x) \wedge P(x))
+$$
+
+Applying De Morgan's law:
+
+$$
+\forall x \neg(M(x) \wedge P(x))
+$$
+
+Applying De Morgan's law:
+
+$$
+\forall x(\neg M(x) \vee \neg P(x))
+$$
+
+English: Every patient either did not have migraines or was not given a placebo.
+
+\section*{2. Exercise 1.9.4}
+\section*{section c}
+
+$$
+\begin{aligned}
+\neg \exists x \forall y(P(x, y) \rightarrow Q(x, y)) & \equiv \forall x \neg \forall y(P(x, y) \rightarrow Q(x, y)& \text {(De Morgan's law)}\\
+& \equiv \forall x \exists y \neg(P(x, y) \rightarrow Q(x, y)                                                      & \text {(De Morgan's law)}\\
+& \equiv \forall x \exists y \neg(\neg P(x, y) \vee Q(x, y)                                                        & \text {(Conditional identity)}\\
+& \equiv \forall x \exists y(\neg \neg P(x, y) \wedge \neg Q(x, y)                                                 & \text {(De Morgan's law)}\\
+& \equiv \forall x \exists y(P(x, y) \wedge \neg Q(x, y))                                                          & \text {(Double negation law)}\\
+\end{aligned}
+$$
+
+\section*{section d}
+
+$$
+\begin{array}{rlr}
+\neg \exists x \forall y(P(x, y) \leftrightarrow P(y, x)) & \equiv \forall x \neg \forall y(P(x, y) \leftrightarrow P(y, x)) & \text { (De Morgan's law) } \\
+& \equiv \forall x \exists y \neg(P(x, y) \leftrightarrow P(y, x)) & \text { (De Morgan's law) } \\
+& \equiv \forall x \exists y \neg((P(x, y) \rightarrow P(y, x)) \wedge(P(y, x) \rightarrow P(x, y))) & \text { (Conditional identity) } \\
+& \equiv \forall x \exists y(\neg(P(x, y) \rightarrow P(y, x)) \vee \neg(P(y, x) \rightarrow P(x, y))) & \text { (De Morgan's law) } \\
+& \equiv \forall x \exists y(\neg(\neg P(x, y) \vee P(y, x)) \vee \neg(\neg P(y, x) \vee P(x, y))) & \text { (Conditional identity) } \\
+& \equiv \forall x \exists y((\neg \neg P(x, y) \wedge \neg P(y, x)) \vee(\neg \neg P(y, x) \wedge \neg P(x, y))) & \text { (De Morgan's law) } \\
+& \equiv \forall x \exists y((P(x, y) \wedge \neg P(y, x)) \vee(P(y, x) \wedge \neg P(x, y))) & \text { (Double negation law) }
+\end{array}
+$$
+
+\section*{section e}
+
+$$
+\begin{aligned}
+\neg(\exists x \exists y P(x, y) \wedge \forall x \forall y Q(x, y)) & \equiv \neg \exists x \exists y P(x, y) \vee \neg \forall x \forall y Q(x, y) & & \text { (De Morgan's law) } \\
+& \equiv \forall x \neg \exists y P(x, y) \vee \exists x \neg \forall y Q(x, y) & & \text { (De Morgan's law) } \\
+& \equiv \forall x \forall y \neg P(x, y) \vee \exists x \exists y \neg Q(x, y) & & \text { (De Morgan's law) }
+\end{aligned}
+$$
+\end{document}
