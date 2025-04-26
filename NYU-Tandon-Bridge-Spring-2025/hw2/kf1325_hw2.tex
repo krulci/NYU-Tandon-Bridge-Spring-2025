@@ -1,0 +1,396 @@
+\documentclass[10pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[version=4]{mhchem}
+\usepackage{stmaryrd}
+\usepackage{array,mathtools}
+\newcommand*{\carry}[1][1]{\overset{#1}}
+\newcolumntype{B}[1]{r*{#1}{@{\,}r}}
+
+\begin{document}
+\section*{Homework 2}
+Student: Kevin Fang (kf1325)
+
+\section*{Question 5}
+\section*{(a)}
+\section*{1. Exercise 1.12.2}
+\section*{section b}
+\[
+\begin{array}{rrr}
+(1) & p \rightarrow (q \wedge r) & \text{Hypothesis} \\
+(2) & \neg q & \text{Hypothesis} \\
+(3) & \neg q \vee \neg r & \text{Addition, 2} \\
+(4) & \neg(q \wedge r) & \text{De Morgan's law, 3} \\
+(5) & \neg p & \text{Modus tollens, 4} \\
+\end{array}
+\]
+
+\section*{section e}
+
+\[
+\begin{array}{rrr}
+(1) & p \vee q & \text{Hypothesis} \\
+(2) & \neg p \vee r & \text{Hypothesis} \\
+(3) & \neg q & \text{Hypothesis} \\
+(4) & p & \text{Disjunctive syllogism, 1, 3} \\
+(5) & \neg \neg p & \text{Double negation law, 4} \\
+(6) & r & \text{Disjunctive syllogism, 2, 5} \\
+\end{array}
+\]
+
+\section*{2. Exercise 1.12.3}
+\section*{section c}
+\[
+\begin{array}{rrr}
+(1) & p \vee q & \text{Hypothesis}\\
+(2) & \neg p & \text{Hypothesis}\\
+(3) & \neg \neg p \vee q & \text{Double negation law, 1}\\
+(4) & \neg p \rightarrow q & \text{Conditional identity, 3}\\ 
+(5) & q & \text{Modus ponens, 2, 4}\\
+\end{array}
+\]
+
+\section*{3. Exercise 1.12.5}
+\section*{section c}
+$p=\mathrm{I}$ will buy a new car\\
+$q=$ I will buy a new house\\
+$r=\mathrm{I}$ will get a job\\
+
+\text{This argument can be written as following:} \\
+
+$$
+\begin{aligned}
+& (p \wedge q) \rightarrow r \\
+& \neg r \\
+\hline
+& \therefore \neg p
+\end{aligned}
+$$
+
+\text{Thus, this argument is invalid.} \\
+
+\text{Proof:} \\
+
+{When $p$ is true, $q$ is false, and $r$ is false, both premises $(p \wedge q) \rightarrow r$ and $\neg r$ are true and the conclusion $\neg p$ is false. Since the premises are true and the conclusion is false, the argument is invalid.} \\
+
+\section*{section d}
+$p=$ I will buy a new car\\
+$q=\mathrm{I}$ will buy a new house\\
+$r=\mathrm{I}$ will get a job\\
+
+\text{This argument can be written as following:}
+
+$$
+\begin{aligned}
+& (p \wedge q) \rightarrow r \\
+& \neg r \\
+& q \\
+\hline
+& \therefore \neg p
+\end{aligned}
+$$
+
+\text{Thus, this argument is invalid.} \\
+
+\text{Proof:} \\
+
+\[
+\begin{array}{rrr}
+(1) & (p \wedge q) \rightarrow r & \text{Hypothesis}\\
+(2) & \neg r                     & \text{Hypothesis}\\
+(3) & q                          & \text{Hypothesis}\\
+(4) & \neg(p \wedge q)           & \text{Modus tollens, 1, 2}\\
+(5) & \neg p \vee \neg q         & \text{De Morgan's law, 4}\\
+(6) & \neg \neg q                & \text{Double negation law, 3}\\
+(7) & \neg p                     & \text{Disjunctive syllogism, 5, 6}\\
+\end{array}
+\]
+
+\section*{(b)}
+\section*{1. Exercise 1.13.3}
+\section*{section b}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+ & $P$ & $Q$ \\
+\hline
+$a$ & F & F \\
+\hline
+$b$ & F & T \\
+\hline
+\end{tabular}
+\end{center}
+
+{Both hypotheses $\exists x(P(x) \vee Q(x))$ and $\exists x \neg Q(x)$ are true for the values of $P$ and $Q$ on elements $a$ and $b$ given in the table. However, the conclusion $\exists x P(x)$ is false. Therefore, the argument is invalid.} \\
+
+\section*{2. Exercise 1.13.5}
+\section*{section d}
+
+\text{The following predicates can be defined as followed:}\\
+
+{$M(x): x$ missed class.}
+
+{$D(x): x$ got a detention.}
+
+\text{These arguments can be formed as followed:}\\
+
+$$
+\begin{aligned}
+& \forall x(M(x) \rightarrow D(x))\\
+& \text{Penelope is an element} \\
+& \neg M (Penelope) \\
+\hline
+& \therefore \neg D (Penelope) \\
+\end{aligned}
+$$
+
+\text{Thus, this argument is invalid.} \\
+
+\text{Proof is shown in the following truth table:} \\
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+ & $M$ & $D$ \\
+\hline
+Penelope & F & T \\
+\hline
+$b$ & F & T \\
+\hline
+\end{tabular}
+\end{center}
+
+All hypotheses, $\forall x(M(x) \rightarrow D(x))$, Penelope is a particular element, $\neg M$ (Penelope) are true for the values of $M$ and $D$ on elements $Penelope$ and $b$ given in the table. However, the conclusion $\neg D($ Penelope $)$ is false. Therefore, the argument is invalid.
+
+\section*{section e}
+
+\text{The following predicates can be defined as followed:}\\
+
+{$M(x): x$ missed class.}
+
+{$D(x): x$ got a detention.}
+
+{$A(x): x$ got an A.}
+
+\text{These arguments can be formed as followed:}\\
+
+$$
+\begin{aligned}
+& \forall x((M(x) \vee D(x)) \rightarrow \neg A(x)) \\
+& \text { Penelope is an element } \\
+& \text { A(Penelope }) \\
+\hline
+& \therefore \neg D(\text { Penelope })
+\end{aligned}
+$$
+
+\text{Thus, this argument is invalid.} \\
+
+\text{Proof is shown as followed:} \\
+
+\[
+\begin{array}{rrr}
+(1) & \forall x((M(x) \vee D(x)) \rightarrow \neg A(x))                                              & \text{Hypothesis}\\
+(2) & \text { Penelope is an element }                                                               & \text{Hypothesis}\\
+(3) & A(\text { Penelope })                                                                          & \text{Hypothesis}\\
+(4) & (M(\text { Penelope }) \vee D(\text { Penelope })) \rightarrow \neg A(\text { Penelope })      & \text{Universal instantiation, 1, 2}\\
+(5) & \neg \neg A(\text { Penelope })                                                                & \text{Double negation law, 3}\\
+(6) & \neg(M(\text { Penelope }) \vee D(\text { Penelope }))                                         & \text{Modus tollens, 4,5}\\
+(7) & \neg M(\text { Penelope }) \wedge \neg D(\text { Penelope })                                   & \text{De Morgan's law, 6}\\
+(8) & \neg D(\text { Penelope })                                                                     & \text{Simplification, 7}\\
+\end{array}
+\]
+
+\pagebreak
+\section*{Question 6}
+\section*{Exercise 2.4.1}
+\section*{section d}
+Proof:
+
+Suppose $x$ and $y$ are two odd integers.\\
+$x$ is an odd integer, $x=2 k+1$, for some integer $k$.\\
+$y$ is an odd integer, $y=2 n+1$, for some integer $n$.\\
+Substitute $x=2k+1$ and $y=2n+1$ into $x y$:
+
+$$
+\begin{aligned}
+x y & =(2 k+1)(2 n+1) \\
+& =4 k n+2 k+2 n+1 \\
+& =2(2 k n+k+n)+1 \\
+\end{aligned}
+$$
+
+$2 k n+k+n$ is an integer since $n$ and $k$ are integers.\\
+Suppose integer $m=2 k n+k+n$, we have $x y$ in the form of $2 m+1$; thus, $x y$ is odd.\\
+Therefore, the product of two odd integers is an odd integer.
+
+\section*{Exercise 2.4.3}
+\section*{section b}
+
+Suppose $x$ is a real number and $x \leq 3$, we prove $12-7 x+x^{2} \geq 0$.\\
+
+$$
+\begin{array}{rr}
+(1) & x \leq 3 \\
+(2) & x-3 \leq 0 \\
+(3) & x-4 \leq-1 \\
+(4) & (x-3)(x-4) \geq 0 \\
+\end{array}
+$$
+
+Since both (2) and (3) are less than or equal to 0, (4) is greater than or equal to 0. Distributing (4), we get the following form:
+$$
+\begin{array}{rr}
+(5) & x^{2}-7 x+12 \geq 0 \\
+\end{array}
+$$
+
+\pagebreak
+\section*{Question 7}
+\section*{Exercise 2.5.1}
+\section*{section d}
+Suppose $n$ is even, we prove $n^{2}-2 n+7$ is odd.\\
+For any even integer $n$, $n$ follows the form $n=2 k$ for some integer $k$.\\
+
+$$
+\begin{aligned}
+n^{2}-2 n+7 & =(2 k)^{2}-2(2 k)+7 \\
+& =4 k^{2}-4 k+7 \\
+& =2\left(2 k^{2}-2 k+3\right)+1
+\end{aligned}
+$$
+
+The final result follows the form $2 m+1$ where the integer $m=2 k^{2}-2 k+3$. $n^{2}-2 n+7$ is odd.
+
+\section*{Exercise 2.5.4}
+\section*{section a}
+Suppose $x>y$, we prove $x^{3}+x y^{2}>x^{2} y+y^{3}$, for every pair of real number $x$ and $y$.\\
+Since $x$ and $y$ are real numbers,
+
+$$
+\begin{aligned}
+x^{2} & \geq 0 \\
+y^{2} & \geq 0
+\end{aligned}
+$$
+
+Thus,
+
+$$
+x^{2}+y^{2} \geq 0
+$$
+
+If $x^{2}+y^{2}=0$, we have $x=0, y=0$; furthermore, $x=y$. Since $x>y$, $x^{2}+y^{2} \neq 0$
+Thus,
+
+$$
+x^{2}+y^{2}>0
+$$
+
+Since $x>y$ and $x^{2}+y^{2}>0$
+
+$$
+\begin{array}{r}
+x\left(x^{2}+y^{2}\right)>y\left(x^{2}+y^{2}\right) \\
+x^{3}+x y^{2}>x^{2} y+y^{3}
+\end{array}
+$$
+
+\section*{section b}
+Suppose $x \leq 10$ and $y \leq 10$, we prove $x+y \leq 20$, for every pair of real number $x$ and $y$.
+
+$$
+\begin{array}{r}
+x+y \leq 10+10 \\
+x+y \leq 20
+\end{array}
+$$
+
+\section*{Exercise 2.5.5}
+\section*{section c}
+Suppose $\frac{1}{r}$ is rational, we prove $r$ is rational.\\
+If $\frac{1}{r}$ is rational, then $\frac{1}{r}=\frac{a}{b}$ for some integers $a$ and $b$, where $b \neq 0$.\\
+We have:
+
+$$
+b=a r
+$$
+
+If $a=0$, then $a r=0$. \\
+Since $a r=b$ and $b \neq 0$, we have $a \neq 0$.\\
+Since $b=a r$ and $a \neq 0$, we have
+
+$$
+r=\frac{b}{a}
+$$
+
+Since both $a$ and $b$ are integers, $r$ must be rational.
+
+\pagebreak
+\section*{Question 8}
+\section*{Exercise 2.6.6}
+\section*{section c}
+We disprove the statement that "the average of three real numbers is greater than any of these three numbers".
+
+$x, y$ and $z$ are real numbers:
+
+$$
+\begin{aligned}
+& \frac{x+y+z}{3}<x \\
+& \frac{x+y+z}{3}<y \\
+& \frac{x+y+z}{3}<z
+\end{aligned}
+$$
+
+The sum of the three inequalities is as followed:
+
+$$
+x+y+z<x+y+z
+$$
+
+Since the above inequality is invalid, the statement that the average of three real numbers is greater than or equal to at least one of the numbers must be true.
+
+\section*{section d}
+We disprove the argument that "there is no smallest integer".\\
+For a smallest integer $x$:
+
+$$
+x-1<x
+$$
+
+Since $x-1$ is less than $x$, there must be an integer that is smaller than $x$; thus, $x$ is not the smallest integer. This statement leads to a contradiction. Therefore, the statement that there is no smallest integer must be true.
+
+\pagebreak
+\section*{Question 9}
+\section*{Exercise 2.7.2}
+\section*{section b}
+Proof:
+
+Consider the following two cases:\\
+Case 1: $x$ and $y$ are even, then $x=2 k$ and $y=2 j$, while $k$ and $j$ are both some integers.
+
+$$
+\begin{aligned}
+x+y & =2 k+2 j \\
+& =2(k+j)
+\end{aligned}
+$$
+
+Since $x+y$ follows the form of $2 m$ for the integer $m=k+j$, $x+y$ must be even.\\
+Case 2: $x$ and $y$ are odd, then $x=2 k+1$ and $y=2 j+1$, while $k$ and $j$ are both some integers.
+
+$$
+\begin{aligned}
+x+y & =2 k+1+2 j+1 \\
+& =2(k+j+1)
+\end{aligned}
+$$
+
+Since $x+y$ follows the form of $2 m$ for the integer $m=k+j+1$, $x+y$ must be even.\\
+In both cases, $x+y$ is even. Therefore, it holds true that "if integers $x$ and $y$ have the same parity, then $x+y$ is even".
+
+
+\end{document}
