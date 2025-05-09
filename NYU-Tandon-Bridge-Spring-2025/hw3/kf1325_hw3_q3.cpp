@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void main()
+int main()
 {
 	double valA, valB, valC;
 	double determinant;
@@ -41,5 +41,5 @@ void main()
 			cout << " no real solution";
 
 	cout << endl;
-	return;
+	return 0;
 }

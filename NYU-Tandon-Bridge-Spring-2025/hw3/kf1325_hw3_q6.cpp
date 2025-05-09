@@ -3,7 +3,7 @@
 
 using namespace std;
 
-void main()
+int main()
 {
 	enum DayOfWeek
 	{
@@ -42,5 +42,5 @@ void main()
 	}
 
 	cout << "The cost of the call is " << lengthOfCall * rate << endl;
-	return;
+	return 0;
 }

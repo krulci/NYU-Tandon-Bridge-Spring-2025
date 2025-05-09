@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void main()
+int main()
 {
 	const int FLOOR_ROUND = 1;
 	const int CEILING_ROUND = 2;
@@ -49,5 +49,5 @@ void main()
 		}
 	}
 
-	return;
+	return 0;
 }

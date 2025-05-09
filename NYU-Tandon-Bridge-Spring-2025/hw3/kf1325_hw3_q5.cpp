@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void main()
+int main()
 {
 	double weightRate = 0.453592, heightRate = 0.0254, weight, height, bmi;
 	
@@ -25,5 +25,5 @@ void main()
 	else
 		cout << "Obese";
 
-	return;
+	return 0;
 }

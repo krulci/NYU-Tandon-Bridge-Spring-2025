@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void main()
+int main()
 {
 	float priceOfItem1, priceOfItem2, taxRate, basePrice, discountedPrice, totalPrice;
 	char isMember;
@@ -34,5 +34,5 @@ void main()
 	cout.precision(5);
 	cout << "Total price: " << totalPrice << endl;
 
-	return;
+	return 0;
 }

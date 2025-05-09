@@ -2,7 +2,7 @@
 
 using namespace std;
 
-void main()
+int main()
 {
 	string name, status;
 	int graduationYear, currentYear, yearToGraduate;
@@ -32,5 +32,5 @@ void main()
 		status = " not in college yet";
 
 	cout << name << ", you are" << status << endl;
-	return;
+	return 0;
 }
