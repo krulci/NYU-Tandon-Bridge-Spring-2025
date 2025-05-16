@@ -43,4 +43,6 @@ int main()
 		count--;
 		cout << endl;
 	}
+
+	return 0;
 }
