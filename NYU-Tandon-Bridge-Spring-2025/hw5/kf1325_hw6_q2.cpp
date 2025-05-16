@@ -8,11 +8,10 @@ int main()
 {
 	int num, guess, min = 1, max = 100, count = 5;
 
-	srand(time(0));
-
 #ifdef _DEBUG
 	num = 25;
 #else
+	srand(time(0));
 	num = (rand() % 100) + 1;
 #endif
 
@@ -37,7 +36,7 @@ int main()
 		}
 		else
 		{
-			cout << "Congrats! You guessed my number in " << count << " guesses." << endl;
+			cout << "Congrats! You guessed my number in " << 5 - count + 1 << " guesses." << endl;
 			break;
 		}
 		count--;
