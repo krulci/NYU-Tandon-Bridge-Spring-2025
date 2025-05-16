@@ -18,7 +18,7 @@ int main()
 
 	yearToGraduate = graduationYear - currentYear;
 
-	if (yearToGraduate == 0)
+	if (yearToGraduate <= 0)
 		status = " Graduated";
 	else if (yearToGraduate == 4)
 		status = " a Freshman";
