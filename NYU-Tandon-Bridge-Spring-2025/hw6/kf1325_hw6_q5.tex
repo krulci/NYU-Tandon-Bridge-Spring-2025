@@ -1,0 +1,75 @@
+%% Title and Preprocessing
+\documentclass[titlepage]{article}\pagestyle{empty}
+\usepackage{amsmath}
+
+\author{Kevin Fang}
+\title{Homework \#6}
+\date{\today}
+\usepackage[left=1cm, right=2cm, vmargin=1cm]{geometry}
+\usepackage{amsfonts}
+
+\def\therefore{\boldsymbol{\text{ }
+\leavevmode
+\lower0.4ex\hbox{$\cdot$}
+\kern-.5em\raise0.7ex\hbox{$\cdot$}
+\kern-0.55em\lower0.4ex\hbox{$\cdot$}
+\thinspace\text{ }}}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+% Start Document Here
+\begin{document}
+\maketitle
+
+\pagebreak
+\section*{Question 5.}
+\subsection*{(a): $5n^3 + 2n^2 + 3n = \Theta(n^3)$}
+
+For $T(n) = 5n^3 + 2n^2 + 3n$ and $h(n) = n^3$, $5n^3 + 2n^2 + 3n = \Theta(n^3)$ if and only if $T(n) = O(h(n))$ and $T(n) = \Theta(h(n))$.\\
+\begin{center}
+For $n \geq 1$, $n \leq n^2 \leq n^3$.\\
+\end{center}
+\begin{center}
+$5n^3 + 2n^2 + 3n \leq 5n^3 + 2n^3 + 3n^3$\\
+$5n^3 + 2n^2 + 3n \leq 10n^3$\\
+$5n^3 + 2n^2 + 3n \leq 10h(n)$\\
+\end{center}
+$T(n) = O(h(n))$ since there are positive constants $c = 10$ and $n_0 = 1$ such that $T(n) \leq ch(n)$ when $n \geq n_0$.\\
+\begin{center}
+For $n \geq 1$, $2n^2 + 3n \geq 0.$\\
+\end{center}
+\begin{center}
+$2n^2 + 3n \geq 0$\\
+$5n^3 + 2n^2 + 3n \geq 5n^3$\\
+$5n^3 + 2n^2 + 3n \geq 5h(n)$\\
+\end{center}
+$T(n) = \Omega(h(n))$ since there are positive constants $c = 5$ and $n_0 = 1$ such that $T(n) \geq ch(n)$ when $n \geq n_0$.\\
+$5n^3 + 2n^2 + 3n = \Theta(n^3)$ since $T(n) = O(h(n))$ and $T(n) = \Theta(h(n))$.\\
+
+\subsection*{(b): $\sqrt{7n^2 + 2n - 8} = \Theta(n)$}
+
+For $T(n) = \sqrt{7n^2 + 2n - 8}$ and $h(n) = n$, $\sqrt{7n^2 + 2n - 8} = \Theta(n)$ if and only if $T(n) = O(h(n))$ and $T(n) = \Theta(h(n))$.\\
+\begin{center}
+For $n \geq 1$, $n \leq n^2$.\\
+\end{center}
+\begin{center}
+$\sqrt{7n^2 + 2n - 8} \leq \sqrt{7n^2 + 2n^2}$\\
+$\sqrt{7n^2 + 2n - 8} \leq \sqrt{9n^2}$\\
+$\sqrt{7n^2 + 2n - 8} \leq 3n$\\
+$\sqrt{7n^2 + 2n - 8} \leq 3h(n)$\\
+\end{center}
+$T(n) = O(h(n))$ since there are positive constants $c = 3$ and $n_0 = 1$ such that $T(n) \leq ch(n)$ when $n \geq n_0$.\\
+\begin{center}
+For $n \geq 4$, $2n - 8 \geq 0.$\\
+\end{center}
+\begin{center}
+$\sqrt{2n - 8} \geq \sqrt{0}.$\\
+$\sqrt{7n^2 + 2n - 8} \geq \sqrt{7n^2}.$\\
+$\sqrt{7n^2 + 2n - 8} \geq \sqrt{7}n.$\\
+$\sqrt{7n^2 + 2n - 8} \geq \sqrt{7}h(n).$\\
+\end{center}
+$T(n) = \Omega(h(n))$ since there are positive constants $c = \sqrt{7}$ and $n_0 = 4$ such that $T(n) \geq ch(n)$ when $n \geq n_0$.\\
+$\sqrt{7n^2 + 2n - 8} = \Theta(n)$ since $T(n) = O(h(n))$ and $T(n) = \Theta(h(n))$.\\
+\end{document}
