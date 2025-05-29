@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="hw5\kf1325_hw6_q2.cpp">
+    <ClCompile Include="hw6\kf1325_hw6_q4.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
