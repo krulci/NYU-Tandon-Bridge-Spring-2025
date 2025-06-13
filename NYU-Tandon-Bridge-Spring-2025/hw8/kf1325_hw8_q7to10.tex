@@ -1,0 +1,82 @@
+%% Title and Preprocessing
+\documentclass[titlepage]{article}\pagestyle{empty}
+\usepackage{amsmath}
+
+\author{Kevin Fang}
+\title{Homework \#8}
+\date{\today}
+\usepackage[left=1cm, right=2cm, vmargin=1cm]{geometry}
+\usepackage{amsfonts}
+
+\def\therefore{\boldsymbol{\text{ }
+\leavevmode
+\lower0.4ex\hbox{$\cdot$}
+\kern-.5em\raise0.7ex\hbox{$\cdot$}
+\kern-0.55em\lower0.4ex\hbox{$\cdot$}
+\thinspace\text{ }}}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+% Start Document Here
+\begin{document}
+\maketitle
+
+\pagebreak
+\section*{Question 7.}
+\subsection*{(a): 6.1.5}
+\subsubsection*{B.} $\frac{\binom{13}{1}\binom{4}{3}\binom{12}{2}\binom{4}{1}\binom{4}{1}}{\binom{52}{5}}$
+\subsubsection*{C.} $\frac{\binom{4}{1}\binom{13}{5}}{\binom{52}{5}}$
+\subsubsection*{D.} $\frac{\binom{4}{2}\binom{13}{1}\binom{12}{3}4^3}{\binom{52}{5}}$
+\subsection*{(b): 6.2.4}
+\subsubsection*{A.} $1 - \frac{\binom{39}{5}}{\binom{52}{5}}$
+\subsubsection*{B.} $1 - \frac{\binom{13}{5}4^5}{\binom{52}{5}}$
+\subsubsection*{C.} $\frac{2 \binom{13}{1} \binom{39}{4} -  \binom{13}{1}^2  \binom{26}{3}}{\binom{52}{5}}$
+\subsubsection*{D.} $1 - \frac{\binom{26}{5}}{\binom{52}{5}}$
+
+\pagebreak
+\section*{Question 8.}
+\subsection*{(a): 6.3.2}
+\subsubsection*{A.} $P(A) = \frac{1}{7}$\\$P(B) = \frac{1}{2}$\\$P(C) = \frac{5!}{7!} = \frac{1}{42}$
+\subsubsection*{B.} $P(A|C) = \frac{1}{10}$
+\subsubsection*{C.} $P(B|C) = \frac{1}{2}$
+\subsubsection*{D.} $P(A|B) = \frac{1}{7}$
+\subsubsection*{E.} (A, B) and (B, C) are independent while (A, C) is not.
+\subsubsection*{(b): 6.3.6}
+\subsubsection*{B.} $(\frac{1}{3})^5 (\frac{2}{3})^5$
+\subsubsection*{C.} $(\frac{1}{3})(\frac{2}{3})^9$
+\subsubsection*{(c): 6.4.2}
+\subsubsection*{A.} $\approx 40.38\%$.
+
+\pagebreak
+\section*{Question 9.}
+\subsection*{(a): 6.5.2}
+\subsubsection*{A.} $\{ 0, 1, 2, 3, 4 \}$
+\subsubsection*{B.} 
+$(0, C(48,5)/C(52,5))$\\
+$(1, C(4,1) C(48,4)/C(52,5))$\\
+$(2, C(4,2) C(48,3)/C(52,5))$\\
+$(3, C(4,3) C(48,2)/C(52,5))$\\
+$(4, C(4,4) C(48,1)/C(52,5))$
+\subsection*{(b): 6.6.1}
+\subsubsection*{A.} $(0 * 3/45 + 21/45 + (2 * 21/45)) = 1.4$
+
+\subsection*{(c): 6.6.4}
+\subsubsection*{A.} $E[X] = (1+4+9+16+25+36)/6 \approx 15.1666667$
+\subsubsection*{B.} $E[Y] = 3/8 + 4(3/8) + 9(1/8) = 3$
+
+\subsection*{(d): 6.7.4}
+\subsubsection*{A.} $10 * \frac{1}{10} = 1$
+
+\pagebreak
+\section*{Question 10.}
+\subsection*{(a): 6.8.1}
+\subsubsection*{A.} $18.5\%$
+\subsubsection*{B.} $26.4\%$
+\subsubsection*{C.} $1$
+\subsubsection*{D.} $39.5\%$ and $1$, the probabilities increase while the expected values stay the same.
+\subsection*{(b): 6.8.3} 
+\subsubsection*{B.} $35.04\%$.
+
+\end{document}    
