@@ -3,13 +3,7 @@
 
 using namespace std;
 
-void analyzeSentence(string sentence, int statsArr[]);
-
-auto isLowerCase = [](char c) -> bool { return c >= 'a' && c <= 'z'; };
-
-auto isUpperCase = [](char c) -> bool { return c >= 'A' && c <= 'Z'; };
-
-auto isLetterChr = [](char c) -> bool { return isLowerCase(c) || isUpperCase(c); };
+void analyzeSentence(const string& sentence, int statsArr[]);
 
 auto areAnagrams = [](int anagram1[], int anagram2[], int n) -> bool
 	{
@@ -49,9 +43,9 @@ int main()
 		<< "These two sentences are not anagrams.";
 }
 
-void analyzeSentence(string sentence, int statsArr[])
+void analyzeSentence(const string& sentence, int statsArr[])
 {
 	for (char c : sentence)
-		if (isLetterChr(c))
+		if (isalpha(c))
 			statsArr[toupper(c) - 'A']++;
 }

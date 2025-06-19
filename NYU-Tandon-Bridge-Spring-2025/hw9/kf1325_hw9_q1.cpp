@@ -3,13 +3,7 @@
 
 using namespace std;
 
-int analyzeSentence(string sentence, int statsArr[]);
-
-auto isLowerCase = [](char c) -> bool { return c >= 'a' && c <= 'z'; };
-
-auto isUpperCase = [](char c) -> bool { return c >= 'A' && c <= 'Z'; };
-
-auto isLetterChr = [](char c) -> bool { return isLowerCase(c) || isUpperCase(c); };
+int analyzeSentence(const string& sentence, int statsArr[]);
 
 int main()
 {
@@ -44,26 +38,24 @@ int main()
 }
 
 // Words are defined as any string of letters
-int analyzeSentence(string sentence, int statsArr[])
+int analyzeSentence(const string& sentence, int statsArr[])
 {
 	int wordCounts = 0;
-	int i = 0;
-	bool wasLetter = false;
+	bool wasAlpha = false;
 
 	for (char c : sentence)
 	{
-		if (isLetterChr(c))
+		if (isalpha(c))
 		{
 			statsArr[toupper(c) - 'A']++;
-			if (!wasLetter)
+			if (!wasAlpha)
 			{
-				wasLetter = true;
-				wordCounts++;
+				wasAlpha = true;
+				++wordCounts;
 			}
 		}
 		else
-			wasLetter = false;
-		i++;
+			wasAlpha = false;
 	}
 
 	return wordCounts;
