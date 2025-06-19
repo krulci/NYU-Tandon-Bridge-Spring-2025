@@ -5,11 +5,11 @@ using namespace std;
 
 int analyzeSentence(string sentence, int statsArr[]);
 
-auto isDelimiter = [](char c) -> bool { return c == ' ' || c == '.' || c == ','; };
-
 auto isLowerCase = [](char c) -> bool { return c >= 'a' && c <= 'z'; };
 
 auto isUpperCase = [](char c) -> bool { return c >= 'A' && c <= 'Z'; };
+
+auto isLetterChr = [](char c) -> bool { return isLowerCase(c) || isUpperCase(c); };
 
 int main()
 {
@@ -43,19 +43,26 @@ int main()
 
 }
 
+// Words are defined as any string of letters
 int analyzeSentence(string sentence, int statsArr[])
 {
 	int wordCounts = 0;
 	int i = 0;
+	bool wasLetter = false;
 
 	for (char c : sentence)
 	{
-		if (isDelimiter(c) || i == (sentence.length() - 1))
-			wordCounts++;
-		if (isLowerCase(c))
-			statsArr[c - 'a']++;
-		if (isUpperCase(c))
-			statsArr[c - 'A']++;
+		if (isLetterChr(c))
+		{
+			statsArr[toupper(c) - 'A']++;
+			if (!wasLetter)
+			{
+				wasLetter = true;
+				wordCounts++;
+			}
+		}
+		else
+			wasLetter = false;
 		i++;
 	}
 

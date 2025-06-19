@@ -9,6 +9,8 @@ auto isLowerCase = [](char c) -> bool { return c >= 'a' && c <= 'z'; };
 
 auto isUpperCase = [](char c) -> bool { return c >= 'A' && c <= 'Z'; };
 
+auto isLetterChr = [](char c) -> bool { return isLowerCase(c) || isUpperCase(c); };
+
 auto areAnagrams = [](int anagram1[], int anagram2[], int n) -> bool
 	{
 		for (int i = 0; i < n; i++)
@@ -50,10 +52,6 @@ int main()
 void analyzeSentence(string sentence, int statsArr[])
 {
 	for (char c : sentence)
-	{
-		if (isLowerCase(c))
-			statsArr[c - 'a']++;
-		if (isUpperCase(c))
-			statsArr[c - 'A']++;
-	}
+		if (isLetterChr(c))
+			statsArr[toupper(c) - 'A']++;
 }
