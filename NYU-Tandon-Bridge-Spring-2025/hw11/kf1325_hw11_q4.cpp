@@ -6,8 +6,8 @@ int lowestCost(int arr[], int pos, int arrSize);
 
 int main()
 {
-	int arr[] = { 0, 3, 80, 6, 57, 10 };
-	int n = 6;
+	int arr[] = { 0, 3, 80, 6, 57, 10, 3, 50, 60, 1000, 1001, 50, 9 };
+	int n = 13;
 
 	int value = lowestCost(arr, 0, n);
 
@@ -17,14 +17,6 @@ int main()
 }
 
 int lowestCost(int arr[], int pos, int arrSize)
-{
-	if (pos == (arrSize - 1))
-		return arr[pos];
-
-	return arr[pos] + lowestCost(arr, arr[pos + 1] < arr[pos + 2] ? pos + 1 : pos + 2, arrSize);
-}
-
-/*int lowestCost(int arr[], int pos, int arrSize)
 {
     if (pos >= arrSize - 1)
         return arr[arrSize - 1];
@@ -36,4 +28,4 @@ int lowestCost(int arr[], int pos, int arrSize)
     int moveTwo = lowestCost(arr, pos + 2, arrSize);
 
     return arr[pos] + (moveOne < moveTwo ? moveOne : moveTwo);
-}*/
+}
