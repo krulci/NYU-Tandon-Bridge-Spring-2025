@@ -1,0 +1,113 @@
+%% Title and Preprocessing
+\documentclass[titlepage]{article}\pagestyle{empty}
+\usepackage{amsmath}
+
+\author{Kevin Fang}
+\title{Homework \#11}
+\date{\today}
+\usepackage[left=1cm, right=2cm, vmargin=1cm]{geometry}
+\usepackage{amsfonts}
+
+\def\therefore{\boldsymbol{\text{ }
+\leavevmode
+\lower0.4ex\hbox{$\cdot$}
+\kern-.5em\raise0.7ex\hbox{$\cdot$}
+\kern-0.55em\lower0.4ex\hbox{$\cdot$}
+\thinspace\text{ }}}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+% Start Document Here
+\begin{document}
+\maketitle
+
+\pagebreak
+\section*{Question 5.}
+\subsection*{a.}
+Base case: $n=1$.\\
+For $n=1$,\\
+$n^3+2n=1^3+2*1=3$\\
+Thus, $3$ divides $n^3+2n$ for $n=1$.\\
+Induction: For all $k \geq 1$, if $3$ divides $k^2 + 2k$, we prove 3 divides $(k+1)^2+2(k+1)$.\\
+$k^3+2k=3m$,$m \in \mathbb{Z}^+$\\
+$(k+1)^3+2(k+1)=k^3+3k^2+3k+1+2k+2$\\
+$=(k^3+2k)+(3k^2+3k+3)$\\
+$=3m+3(k^2+k+1)$\\
+$=3(m+k^2+2k+1)$\\
+Since $m+k^2+2k+1$ is an positive integer, 3 divides $(k+1)^2+2(k+1)$.\\
+
+\subsection*{b.}
+Base case: $n=2$\\
+For $n=2$, $2$ is a prime.\\
+Induction: Assume for all $k \geq 2$, all integers can be written as a product of prime.\\
+We then prove $k+1$ can be written as a product of prime.\\
+If $k+1$ is prime, then it can be written as $1*(k+1)$\\
+If $k+1$ is not prime, then it can be written as\\
+$k+1=a*b$ for $2 \leq a, b \leq k$\\
+Since we assumed for all $k \geq 2$, all integers can be written as a product of prime.\\
+Thus, $a$ and $b$ are products of prime.\\
+Thus, $k+1$ is a product of prime.\\
+
+\pagebreak
+\section*{Question 6.}
+\subsection*{(a): 7.4.1}
+\subsubsection*{A.} 
+$P(3)$ is true since $1^2 + 2^2+3^2 = (3(3+1)((3 * 2) + 1))/6 = 14$.
+\subsubsection*{B.}
+$P(k)=\sum_{j=1}^{k}j^2=\frac{k(k+1)(2k+1)}{6}$
+\subsubsection*{C.}
+$P(k+1)=\sum_{j=1}^{k+1}j^2=\frac{(k+1)(k+1+1)(2(k+1)+1)}{6}$
+\subsubsection*{D.}
+$P(1) = \frac{6}{6} = 1$. Thus $P(1)$ is true.
+\subsubsection*{E.}
+We prove in the inductive step that: $\sum_{j=1}^{k+1}j^2=\frac{(k+1)(k+1+1)(2(k+1)+1)}{6}$\\
+For all $k \geq 1$, $P(k)$ implies $P(k+1)$.
+\subsubsection*{F.}
+The inductive hypothesis is $P(k)=\sum_{j=1}^{k}j^2=\frac{(k+1)(2k+1)}{6}$
+\subsubsection*{G.}
+Base case: $n=1$\\
+$\sum_{j=1}^{1}k^2=1^2=1$\\
+$1*(1+1)*(2*1+1)/6=(1*2*3)/6=1$\\
+Thus, $P(1)$ is true.\\
+Induction: For all $k \geq 1$, if $P(k)$ is true, we prove $P(k+1)$ is also true.\\
+$\sum_{j=1}^{k+1}(k+1)^2=\sum_{j=1}^{k}k^2+(k+1)^2$\\
+$=\frac{k(k+1)(2k+1)}{6}+(k+1)^2$\\
+$=\frac{k(k+1)(2k+1)}{6}+\frac{6(k+1)(k+1)}{6}$\\
+$=\frac{(k+1)(2k^2+7k+6)}{6}$\\
+$=\frac{(k+1)(k+2)(2k+3)}{6}$\\
+$=\frac{(k+1)((k+1)+1)(2(k+1)+1)}{6}$\\
+$=\frac{l(l+1)(2l+1)}{6}$ for $l=k+1$\\
+Thus, for all $k\geq1$, $P(k+1)$ is true if $P(k)$ is true.\\
+\pagebreak
+\subsection*{(b):7.4.3}
+Prove that for $n \geq 1$: $\sum_{j=1}^{n}\frac{1}{j^2}\le2-\frac{1}{n}$.\\
+Base case: $n = 1$:\\
+\[f(1)=\frac{1}{1^2}\le2-\frac{1}{1}=1\leq 1\]\\
+Base case is true.\\
+Induction:\\
+We assume \[\sum_{j=1}^{k}\frac{1}{j^2}\le2-\frac{1}{k}\]
+We prove that:
+\[\sum_{j=1}^{k+1}\frac{1}{j^2}\le2-\frac{1}{k+1}\]
+$\sum_{j=1}^{k+1}\frac{1}{(k+1)^2}=\sum_{j=1}^{k}\frac{1}{k^2}+\frac{1}{(k+1)^2}$\\
+$\leq2-\frac{1}{k}+\frac{1}{(k+1)^2}$\\
+$\leq2-\frac{1}{k}+\frac{1}{k(k+1)}$\\
+$\leq2-\frac{(k+1)}{k(k+1)}+\frac{1}{k(k+1)}$\\
+$\leq2-\frac{k}{k(k+1)}$\\
+$\leq2-\frac{1}{(k+1)}$\\
+Thus, for all $k\geq1$, $P(k+1)$ is true if $P(k)$ is true.\\
+\subsection*{(c):7.5.1}
+Base case: $n=1$\\
+For $n=1$, $3^{2*1}-1=8=2*4$\\
+Thus, $P(1)$ is true.\\
+Induction: For all $k\geq1$, we prove $P(k+1)$ is true if $P(k)$ is true.\\
+$3^{2k}-1=4m, m \in \mathbb{Z}^+$\\
+$3^{2(k+1)}-1=3^{2k+2}-1$\\
+$=3^2*3^{2k}-1$\\
+$=9*3^{2k}-9+8$\\
+$=9*(3^{2k}-1)+8$\\
+$=9*4m+8$\\
+$=4*(9m+2)$\\
+Since $9m+2$ is a positive integer, $4$ evenly divides $3^{2(k+1)}-1$. Thus, for all $k\geq1$, $P(k+1)$ is true if $P(k)$ is true.
+\end{document}
