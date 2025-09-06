@@ -159,8 +159,7 @@ void RBT<T>::singleCR(RBTNode<T> *&point) {
     // Update reference passed by reference
     // Only necessary if recursion is needed
     // Can be omitted if *&point is never used again
-    // This should not be done as doubleCR and doubleCCR shares the same reference pointer
-    //point = parent;
+    point = parent;
 }
 
 template <class T>
@@ -196,8 +195,7 @@ void RBT<T>::singleCCR(RBTNode<T> *&point) {
     // Update reference passed by reference
     // Only necessary if recursion is needed
     // Can be omitted if *&point is never used again
-    // This should not be done as doubleCR and doubleCCR shares the same reference pointer
-    //point = parent;
+    point = parent;
 }
 
 template <class T>
@@ -234,11 +232,21 @@ void RBT<T>::insert(const T &toInsert, RBTNode<T> *&point, RBTNode<T> *parent) {
                         singleCR(grandparent);
                     // 2. An insertion into the right subtree of the left child of α
                     else
+                    {
+                        swapColor(curr_node);
+                        swapColor(parent);
+                        curr_node = grandparent;
                         doubleCR(grandparent);
+                    }
                 else
                     // 3. An insertion into the left subtree of the right child of α
                     if (parent->left == curr_node)
+                    {
+                        swapColor(curr_node);
+                        swapColor(parent);
+                        curr_node = grandparent;
                         doubleCCR(grandparent);
+                    }
                     // 4. An insertion into the right subtree of the right child of α
                     else
                         singleCCR(grandparent);
