@@ -1,0 +1,88 @@
+%% Title and Preprocessing
+\documentclass[titlepage]{article}\pagestyle{empty}
+\usepackage{amsmath}
+
+\author{Kevin Fang}
+\title{Homework \#19}
+\date{\today}
+\usepackage[left=1cm, right=2cm, vmargin=1cm]{geometry}
+\usepackage{amsfonts}
+
+\def\therefore{\boldsymbol{\text{ }
+\leavevmode
+\lower0.4ex\hbox{$\cdot$}
+\kern-.5em\raise0.7ex\hbox{$\cdot$}
+\kern-0.55em\lower0.4ex\hbox{$\cdot$}
+\thinspace\text{ }}}
+
+\usepackage{mathtools}
+\DeclarePairedDelimiter\ceil{\lceil}{\rceil}
+\DeclarePairedDelimiter\floor{\lfloor}{\rfloor}
+
+% Start Document Here
+\begin{document}
+\maketitle
+
+\pagebreak
+\section*{Question 1.}
+The UNIX $fork()$ function is a fundamental system call used in network programming and process management. It is designed to create a new process by duplicating the existing process, known as the parent process. This new process is referred to as the child process. The $fork()$ function is essential in environments where threading support is limited or unavailable, as it allows for concurrent execution of processes.
+
+When a program calls $fork()$, the operating system performs several key actions:
+
+\begin{enumerate}
+  \item Process Duplication: The $fork()$ call results in the creation of a child process that is an exact copy of the parent process. This includes duplicating the process's memory space, file descriptors, and execution context.
+
+
+  \item Copy-on-Write Mechanism: To optimize performance and resource usage, UNIX systems often use a "copy-on-write" strategy. This means that the memory pages of the parent process are not immediately copied for the child. Instead, both processes share the same memory pages marked as read-only. Actual copying occurs only when either process attempts to modify a shared page.
+
+
+  \item Separate Process IDs: The child process receives a unique process identifier (PID) distinct from the parent. This PID is used to manage and control the child process independently.
+\end{enumerate}
+
+Process States After Fork
+
+After invoking $fork()$, both the parent and child processes enter specific states within the operating system:
+\begin{enumerate}
+  \item Running State: Immediately after the fork, both processes are in the running state. They execute the next instruction following the $fork()$ call. The return value of $fork()$ helps distinguish between the parent and child:
+    \begin{itemize}
+      \item The parent receives the child's PID as the return value.
+      \item The child receives a return value of zero.
+    \end{itemize}
+  \item Ready State: If the CPU is not available, either process may enter the ready state, waiting for CPU time to continue execution.
+  \item Blocked State: Processes can enter a blocked state if they are waiting for an event, such as I/O completion. This state is independent of the $fork()$ operation but is common in process lifecycle management.
+  \item Terminated State: Eventually, processes will complete their execution and enter the terminated state. The parent process can use system calls like $wait()$ to retrieve the termination status of the child process, ensuring proper cleanup.
+\end{enumerate}
+Windows does not implement the UNIX-style $fork()$ system call. The concept and mechanism of $fork()$—duplicating a running process, including its memory and execution context—are specific to UNIX and UNIX-like operating systems (such as Linux and macOS).
+Windows uses a different model for creating new processes:
+
+\begin{enumerate}
+  \item CreateProcess API:
+The primary way to create a new process in Windows is via the $CreateProcess()$ function. This API starts a new process from an executable file, rather than duplicating the current process.
+
+
+  \item No Memory Duplication:
+Unlike $fork()$, $CreateProcess()$ does not copy the parent’s memory space, file descriptors, or execution state. Instead, it loads a fresh instance of the specified program.
+
+
+  \item Explicit Inheritance:
+If you want the child process to inherit certain handles or environment variables, you must specify this explicitly when calling $CreateProcess()$.
+\end{enumerate}
+
+\begin{enumerate}
+  \item UNIX ($fork()$):
+
+    \begin{itemize}
+      \item Duplicates the current process.
+      \item Both parent and child continue executing from the next instruction.
+      \item Useful for servers that spawn child processes to handle requests.
+    \end{itemize}
+  \item Windows ($CreateProcess()$):
+
+    \begin{itemize}
+      \item Starts a new process from a given executable.
+      \item Parent and child do not share memory or execution context unless explicitly set up.
+      \item Concurrency Models:
+Windows encourages the use of threads (via $CreateThread()$) and asynchronous I/O for concurrency, rather than process duplication.
+    \end{itemize}
+\end{enumerate}
+\end{document}
